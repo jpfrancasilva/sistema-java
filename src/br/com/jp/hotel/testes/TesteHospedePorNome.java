@@ -9,7 +9,7 @@ public class TesteHospedePorNome {
 		
 		HospedesDAO dao = new HospedesDAO();
 		
-		Hospedes hospede = dao.hospedePorNome("Wátila Costa");
+		Hospedes hospede = dao.hospedePorNome("João Paulo França");
 		
 		System.out.println(hospede.getCodigo());
 		System.out.println(hospede.getNome());

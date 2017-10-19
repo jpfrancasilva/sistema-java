@@ -11,12 +11,12 @@ public class ReservaQuarto implements Logica {
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-		// PEGANDO PARÂMETROS E GUARDANDO EM VARIÁVEIS
+		// PEGANDO PARÂMETROS E GUARDANDO EM VARIÁVEIS --qualquer coisa teste
 		String nome = request.getParameter("nome");
 		String endereco = request.getParameter("endereco");
 		String telefone = request.getParameter("telefone");
 		String cpf = request.getParameter("cpf");
-		Integer NumDePessoas = Integer.parseInt(request.getParameter("pessoas"));
+		String NumDePessoas = request.getParameter("pessoas");
 
 		// INSTANCIANDO UM NOVO OBJETO HOSPEDE E SETANDO OS PARÂMETROS
 		Hospedes hospede = new Hospedes();

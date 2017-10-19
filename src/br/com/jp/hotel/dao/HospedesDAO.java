@@ -54,7 +54,7 @@ public class HospedesDAO {
 				hospede.setNome(rs.getString("nome"));
 				hospede.setEndereco(rs.getString("endereco"));
 				hospede.setTelefone(rs.getString("telefone"));
-				hospede.setPessoas(rs.getString("pessoas"));
+				hospede.setPessoas("pessoas");
 				hospede.setCpf(rs.getString("cpf"));
 
 				// adicionando um hospede à lista de hospedes

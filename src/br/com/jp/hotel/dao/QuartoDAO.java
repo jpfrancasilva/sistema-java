@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.jp.hotel.ConnectionFactory;
+import br.com.jp.hotel.conexao.ConnectionFactory;
 import br.com.jp.hotel.model.Quarto;
 
 public class QuartoDAO {
