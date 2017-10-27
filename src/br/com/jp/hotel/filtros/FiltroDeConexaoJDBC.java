@@ -14,7 +14,7 @@ import javax.servlet.annotation.WebFilter;
 import br.com.jp.hotel.conexao.ConnectionFactory;
 
 @WebFilter("/*")
-public class FiltroDeConexaoJDBC implements Filter {
+public abstract class FiltroDeConexaoJDBC implements Filter {
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
