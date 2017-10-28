@@ -55,7 +55,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<h5>Hotel Five Stars</h5>
+						<h5>Sistema Rasengan</h5>
 					</div>
 				</div>
 			</div>

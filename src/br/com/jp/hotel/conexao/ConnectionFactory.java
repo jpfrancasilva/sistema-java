@@ -9,7 +9,7 @@ public class ConnectionFactory {
 	public Connection getConnection() {
 		
 		String driver = "org.postgresql.Driver";
-		String url = "jdbc:postgresql://localhost:5432/SistemaHotel?autoReconnect=true&useSSL=false";
+		String url = "jdbc:postgresql://localhost:5432/SistemaHotel";//?autoReconnect=true&useSSL=false";
 		String user = "postgres";
 		String password = "12345678";
 		
