@@ -19,7 +19,7 @@ public class Sistema extends HttpServlet {
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String parametro = request.getParameter("logica");
-		String NomeClasse = "logica." + parametro;
+		String NomeClasse = "br.com.jp.hotel.logica." + parametro;
 
 		try {
 			Class<?> classe = Class.forName(NomeClasse);
