@@ -16,7 +16,7 @@ public class HospedesDAO {
 
 	// ESTE MÉTODO ADICIONA UM NOVO HÓSPEDE
 	public void adicionar(Hospedes hospede) {
-		String sql = "INSERT INTO hospede (nome, endereco, telefone, pessoas, cpf) VALUES (?,?,?,?,?)";
+		String sql = "INSERT INTO hospede (nome, endereco, telefone, cpf) VALUES (?,?,?,?)";
 
 		try {
 
@@ -24,8 +24,7 @@ public class HospedesDAO {
 			stmt.setString(1, hospede.getNome());
 			stmt.setString(2, hospede.getEndereco());
 			stmt.setString(3, hospede.getTelefone());
-			stmt.setString(4, hospede.getPessoas());
-			stmt.setString(5, hospede.getCpf());
+			stmt.setString(4, hospede.getCpf());
 
 			stmt.execute();
 			stmt.close();
@@ -54,7 +53,6 @@ public class HospedesDAO {
 				hospede.setNome(rs.getString("nome"));
 				hospede.setEndereco(rs.getString("endereco"));
 				hospede.setTelefone(rs.getString("telefone"));
-				hospede.setPessoas("pessoas");
 				hospede.setCpf(rs.getString("cpf"));
 
 				// adicionando um hospede à lista de hospedes
@@ -83,7 +81,6 @@ public class HospedesDAO {
 				hospede.setCodigo(rs.getLong("codigo"));
 				hospede.setNome("nome");
 				hospede.setEndereco("endereco");
-				hospede.setPessoas("pessoas");
 				hospede.setCpf("cpf");
 				hospede.setTelefone("telefone");
 			}
@@ -108,7 +105,6 @@ public class HospedesDAO {
 				hospede.setCodigo(rs.getLong("codigo"));
 				hospede.setNome(rs.getString("nome"));
 				hospede.setEndereco(rs.getString("endereco"));
-				hospede.setPessoas(rs.getString("pessoas"));
 				hospede.setCpf(rs.getString("cpf"));
 				hospede.setTelefone(rs.getString("telefone"));
 			}
@@ -123,7 +119,7 @@ public class HospedesDAO {
 	// MÉTODO PARA EDITAR O HÓSPEDE PELO CÓDIGO
 	public void editar(Hospedes hospede) {
 
-		String sql = "UPDATE hospede set nome = ?, endereco = ?, telefone = ?, pessoas = ?, cpf = ? WHERE codigo = ?";
+		String sql = "UPDATE hospede set nome = ?, endereco = ?, telefone = ?, cpf = ? WHERE codigo = ?";
 
 		try {
 
@@ -131,9 +127,8 @@ public class HospedesDAO {
 			stmt.setString(1, hospede.getNome());
 			stmt.setString(2, hospede.getEndereco());
 			stmt.setString(3, hospede.getTelefone());
-			stmt.setString(4, hospede.getPessoas());
-			stmt.setString(5, hospede.getCpf());
-			stmt.setLong(6, hospede.getCodigo());
+			stmt.setString(4, hospede.getCpf());
+			stmt.setLong(5, hospede.getCodigo());
 
 			stmt.execute();
 			stmt.close();

@@ -18,7 +18,6 @@
 						<th>Telefone</th>
 						<th>CPF</th>
 						<th>Endereço</th>
-						<th>Pessoas</th>
 						<th class="actions">Ações</th>
 					</tr>
 				</thead>
@@ -30,7 +29,6 @@
 							<td>${hospede.telefone}</td>
 							<td>${hospede.cpf}</td>
 							<td>${hospede.endereco}</td>
-							<td>${hospede.pessoas}</td>
 							<td class="actions"><a class="btn btn-primary btn-xs"
 								href="sistema?logica=BuscaHospede&codigo=${hospede.codigo}">Editar</a>
 								<a
@@ -84,7 +82,7 @@
 									placeholder="somente números" required="required">
 							</div>
 
-							<div class="form-group form-group-sm">
+							<!--  <div class="form-group form-group-sm">
 								<label for="pessoas" class="control-label">Nº de Pessoas</label>
 								<select name="pessoas" class="form-control" id="pessoas">
 									<option>1</option>
@@ -98,7 +96,7 @@
 									<option>9</option>
 									<option>10</option>
 								</select>
-							</div>
+							</div>  -->
 
 							<button type="submit" class="btn btn-primary">Cadastrar</button>
 							<button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>

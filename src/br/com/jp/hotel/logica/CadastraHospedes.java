@@ -19,14 +19,12 @@ public class CadastraHospedes implements Logica {
 		String nome = request.getParameter("nome");
 		String endereco = request.getParameter("endereco");
 		String telefone = request.getParameter("telefone");
-		String pessoas = request.getParameter("pessoas");
 		String cpf = request.getParameter("cpf");
 
 		Hospedes hospede = new Hospedes();
 		hospede.setNome(nome);
 		hospede.setEndereco(endereco);
 		hospede.setTelefone(telefone);
-		hospede.setPessoas(pessoas);
 		hospede.setCpf(cpf);
 
 		HospedesDAO dao = new HospedesDAO();

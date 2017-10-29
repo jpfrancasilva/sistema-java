@@ -16,7 +16,6 @@ public class ReservaQuarto implements Logica {
 		String endereco = request.getParameter("endereco");
 		String telefone = request.getParameter("telefone");
 		String cpf = request.getParameter("cpf");
-		String NumDePessoas = request.getParameter("pessoas");
 
 		// INSTANCIANDO UM NOVO OBJETO HOSPEDE E SETANDO OS PARÂMETROS
 		Hospedes hospede = new Hospedes();
@@ -24,7 +23,6 @@ public class ReservaQuarto implements Logica {
 		hospede.setEndereco(endereco);
 		hospede.setTelefone(telefone);
 		hospede.setCpf(cpf);
-		hospede.setPessoas(NumDePessoas);
 
 		// INSTACIANDO O DAO E ADD UM NOVO HOSPEDE
 		HospedesDAO dao = new HospedesDAO();

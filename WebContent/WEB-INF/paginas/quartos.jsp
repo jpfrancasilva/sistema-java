@@ -14,8 +14,8 @@
 				<thead>
 					<tr>
 						<th>Código</th>
-						<th>Número</th>
 						<th>Andar</th>
+						<th>Número</th>
 						<th>Descrição</th>
 						<th>Diária</th>
 						<th>Tipo</th>
@@ -28,8 +28,8 @@
 					<c:forEach var="quarto" items="${quartos}">
 						<tr>
 							<td>${quarto.codigo}</td>
-							<td>${quarto.numero}</td>
 							<td>${quarto.andar}</td>
+							<td>${quarto.numero}</td>
 							<td>${quarto.descricao}</td>
 							<td>${quarto.valorDiaria}</td>
 							<td>${quarto.tipo}</td>
@@ -60,7 +60,7 @@
 						<h2>Preencha os dados do novo hóspede</h2>
 						<form action="sistema?logica=CadastraQuartos" method="post"
 							id="cadastraQuartos" data-toggle="validator" role="form">
-
+							
 							<div class="form-group form-group-sm">
 								<label for="numero" class="control-label">Número</label> <input
 									type="text" class="form-control" name="numero"
@@ -70,7 +70,7 @@
 							<div class="form-group form-group-sm">
 								<label for="andar" class="control-label">Andar</label> <input
 									type="text" class="form-control" name="andar"
-									placeholder="Ex: 1º">
+									placeholder="Ex: 1">
 							</div>
 
 							<div class="form-group form-group-sm">
@@ -101,12 +101,6 @@
 									<option>2</option>
 									<option>3</option>
 									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
 								</select>
 							</div>
 							

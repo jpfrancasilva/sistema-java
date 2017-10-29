@@ -26,7 +26,7 @@
 						class="form-control input-sm" name="telefone"
 						value="${hospede.telefone}" />
 				</div>
-				<div class="form-group form-group-sm">
+				<!-- <div class="form-group form-group-sm">
 					<label for="pessoas" class="control-label">Nº de Pessoas</label> <select
 						name="pessoas" class="form-control" id="pessoas">
 						<option>1</option>
@@ -40,7 +40,7 @@
 						<option>9</option>
 						<option>10</option>
 					</select>
-				</div>
+				</div> -->
 				<div class="form-group">
 					<label for="cpf">CPF</label> <input type="text"
 						class="form-control input-sm" name="cpf" value="${hospede.cpf}" />

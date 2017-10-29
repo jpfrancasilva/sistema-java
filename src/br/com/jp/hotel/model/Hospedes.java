@@ -10,7 +10,6 @@ public class Hospedes implements Serializable {
 	private String cpf;
 	private String endereco;
 	private String telefone;
-	private String pessoas;
 
 	public Hospedes() {
 	}
@@ -45,14 +44,6 @@ public class Hospedes implements Serializable {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
-	}
-
-	public String getPessoas() {
-		return pessoas;
-	}
-
-	public void setPessoas(String pessoas2) {
-		this.pessoas = pessoas2;
 	}
 
 	public String getCpf() {

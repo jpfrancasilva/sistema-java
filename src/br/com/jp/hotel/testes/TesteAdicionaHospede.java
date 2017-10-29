@@ -11,7 +11,6 @@ public class TesteAdicionaHospede {
 		hospede.setNome("Marcelo Ferreira");
 		hospede.setCpf("000.000.000-00");
 		hospede.setEndereco("Estrada do Pici,12");
-		hospede.setPessoas("");
 		hospede.setTelefone("0000000000");
 		
 		HospedesDAO dao = new HospedesDAO();

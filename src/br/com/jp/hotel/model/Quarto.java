@@ -7,7 +7,7 @@ public class Quarto implements Serializable {
 	private static final long serialVersionUID = 7507334445797620913L;
 	private Long codigo;
 	private int numero;
-	private String andar;
+	private int andar;
 	private String descricao;
 	private double valorDiaria;
 	private String tipo;
@@ -33,11 +33,11 @@ public class Quarto implements Serializable {
 		this.numero = numero;
 	}
 
-	public String getAndar() {
+	public int getAndar() {
 		return andar;
 	}
 
-	public void setAndar(String andar) {
+	public void setAndar(int andar) {
 		this.andar = andar;
 	}
 
@@ -83,6 +83,11 @@ public class Quarto implements Serializable {
 
 	public void setSituacao(String situacao) {
 		this.situacao = situacao;
+	}
+
+	public void setInt(int int1) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -16,12 +16,13 @@ public class Login implements Logica {
 
 		Usuario usuario = new UsuarioDAO().buscaPorEmailESenha(email, senha);
 
-		if (usuario == null) {
+		if (usuario.getNome() == null) {
 			System.out.println("usuario nao existe");
-			return "index.html";
+			return "";
 		} else {
 			System.out.println("Usuário logado: " + usuario.getNome());
-			return "index.html";
+			return "WEB-INF/paginas/cabecalho.jsp";
 		}
+		
 	}
 }

@@ -25,7 +25,7 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="form-wrap">
-							<h1>Faça o login com seu email e senha</h1>
+							<h1>Faça o login com seu email e senha!</h1>
 							<form role="form" action="sistema?logica=Login" method="post"
 								id="login-form" autocomplete="off">
 								<div class="form-group">

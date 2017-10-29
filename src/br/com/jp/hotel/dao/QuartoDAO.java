@@ -17,18 +17,19 @@ public class QuartoDAO {
 	// INSERE QUARTO
 	public void adicionar(Quarto quarto) {
 
-		String sql = "INSERT INTO quarto (numero, andar, descricao, valorDiaria, tipo, numeroPessoa, situacao) VALUES(?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO quarto (codigo, numero, andar, descricao, valorDiaria, tipo, numeroPessoa, situacao) VALUES(?,?,?,?,?,?,?,?)";
 
 		try {
 
 			PreparedStatement st = conexao.prepareStatement(sql);
-			st.setInt(1, quarto.getNumero());
-			st.setString(2, quarto.getAndar());
-			st.setString(3, quarto.getDescricao());
-			st.setDouble(4, quarto.getValorDiaria());
-			st.setString(5, quarto.getTipo());
-			st.setInt(6, quarto.getNumeroPessoa());
-			st.setString(7, quarto.getSituacao());
+			st.setFloat(1, quarto.getCodigo());
+			st.setInt(2, quarto.getNumero());
+			st.setInt(3, quarto.getAndar());
+			st.setString(4, quarto.getDescricao());
+			st.setDouble(5, quarto.getValorDiaria());
+			st.setString(6, quarto.getTipo());
+			st.setInt(7, quarto.getNumeroPessoa());
+			st.setString(8, quarto.getSituacao());
 
 			st.execute();
 			st.close();
@@ -48,7 +49,7 @@ public class QuartoDAO {
 
 			PreparedStatement st = conexao.prepareStatement(sql);
 			st.setInt(1, quarto.getNumero());
-			st.setString(2, quarto.getAndar());
+			st.setInt(2, quarto.getAndar());
 			st.setString(3, quarto.getDescricao());
 			st.setDouble(4, quarto.getValorDiaria());
 			st.setString(5, quarto.getTipo());
@@ -93,7 +94,7 @@ public class QuartoDAO {
 				Quarto quarto = new Quarto();
 				quarto.setCodigo(rs.getLong("codigo"));
 				quarto.setNumero(rs.getInt("numero"));
-				quarto.setAndar(rs.getString("andar"));
+				quarto.setAndar(rs.getInt("andar"));
 				quarto.setDescricao(rs.getString("descricao"));
 				quarto.setTipo(rs.getString("tipo"));
 				quarto.setNumeroPessoa(rs.getInt("numeroPessoa"));
@@ -126,7 +127,7 @@ public class QuartoDAO {
 
 			if (rs.next()) {
 				quarto.setCodigo(rs.getLong("codigo"));
-				quarto.setAndar(rs.getString("andar"));
+				quarto.setAndar(rs.getInt("andar"));
 				quarto.setDescricao(rs.getString("descricao"));
 				quarto.setNumero(rs.getInt("numero"));
 				quarto.setNumeroPessoa(rs.getInt("numeroPessoas"));
