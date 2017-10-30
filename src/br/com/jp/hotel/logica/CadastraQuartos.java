@@ -12,23 +12,23 @@ public class CadastraQuartos implements Logica {
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		int codigo = Integer.parseInt(request.getParameter("andar") + request.getParameter("andar"));
+		int codigo = Integer.parseInt(request.getParameter("andar") + request.getParameter("numero"));
 		int numero = Integer.parseInt(request.getParameter("numero"));
 		int andar = Integer.parseInt(request.getParameter("andar"));
 		String descricao = request.getParameter("descricao");
-		Float valorDiaria = Float.parseFloat(request.getParameter("valorDiaria"));
+		Double valorDiaria = Double.parseDouble(request.getParameter("diaria"));
 		String tipo = request.getParameter("tipo");
 		String situacao = request.getParameter("situacao");
 
 		Quarto quarto = new Quarto();
-		quarto.setCodigo((long) codigo);
+		quarto.setCodigo(codigo);
 		quarto.setNumero(numero);
 		quarto.setAndar(andar);
 		quarto.setDescricao(descricao);
 		quarto.setValorDiaria(valorDiaria);
 		quarto.setTipo(tipo);
 		quarto.setSituacao(situacao);
-
+		
 		QuartoDAO dao = new QuartoDAO();
 		dao.adicionar(quarto);
 

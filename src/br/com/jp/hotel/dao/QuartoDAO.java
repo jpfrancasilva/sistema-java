@@ -22,7 +22,7 @@ public class QuartoDAO {
 		try {
 
 			PreparedStatement st = conexao.prepareStatement(sql);
-			st.setFloat(1, quarto.getCodigo());
+			st.setInt(1, quarto.getCodigo());
 			st.setInt(2, quarto.getNumero());
 			st.setInt(3, quarto.getAndar());
 			st.setString(4, quarto.getDescricao());
@@ -90,7 +90,7 @@ public class QuartoDAO {
 
 			while (rs.next()) {
 				Quarto quarto = new Quarto();
-				quarto.setCodigo(rs.getLong("codigo"));
+				quarto.setCodigo(rs.getInt("codigo"));
 				quarto.setNumero(rs.getInt("numero"));
 				quarto.setAndar(rs.getInt("andar"));
 				quarto.setDescricao(rs.getString("descricao"));
@@ -123,7 +123,7 @@ public class QuartoDAO {
 			ResultSet rs = st.executeQuery();
 
 			if (rs.next()) {
-				quarto.setCodigo(rs.getLong("codigo"));
+				quarto.setCodigo(rs.getInt("codigo"));
 				quarto.setAndar(rs.getInt("andar"));
 				quarto.setDescricao(rs.getString("descricao"));
 				quarto.setNumero(rs.getInt("numero"));

@@ -19,7 +19,6 @@
 						<th>Descrição</th>
 						<th>Diária</th>
 						<th>Tipo</th>
-						<th>Máx. de pessoas</th>
 						<th>Situação</th>
 						<th class="actions">Ações</th>
 					</tr>
@@ -56,7 +55,7 @@
 				<!-- FORMULÁRIO DE CADASTRO DE HÓSPEDES -->
 				<div class="row">
 					<div class="col-md-offset-1 col-md-10 col-md-offset-1">
-						<h2>Preencha os dados do novo hóspede</h2>
+						<h2>Preencha os dados do novo quarto</h2>
 						<form action="sistema?logica=CadastraQuartos" method="post"
 							id="cadastraQuartos" data-toggle="validator" role="form">
 							
@@ -92,7 +91,7 @@
 								</select>
 							</div>
 
-							<div class="form-group form-group-sm">
+							<!--  <div class="form-group form-group-sm">
 								<label for="numeroPessoa" class="control-label">Máx. de
 									Pessoas</label> <select name="numeroPessoa" class="form-control"
 									id="numeroPessoa">
@@ -101,7 +100,7 @@
 									<option>3</option>
 									<option>4</option>
 								</select>
-							</div>
+							</div>  -->
 							
 							<div class="form-group form-group-sm">
 								<label for="situacao" class="control-label">Situação</label>

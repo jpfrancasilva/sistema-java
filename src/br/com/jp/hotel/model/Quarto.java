@@ -5,22 +5,22 @@ import java.io.Serializable;
 public class Quarto implements Serializable {
 
 	private static final long serialVersionUID = 7507334445797620913L;
-	private Long codigo;
+	private int codigo;
 	private int numero;
 	private int andar;
 	private String descricao;
-	private double valorDiaria;
+	private Double valorDiaria;
 	private String tipo;
 	private String situacao;
 
 	public Quarto() {
 	}
 
-	public Long getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(Long codigo) {
+	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
 
@@ -74,11 +74,6 @@ public class Quarto implements Serializable {
 
 	public void setSituacao(String situacao) {
 		this.situacao = situacao;
-	}
-
-	public void setInt(int int1) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
