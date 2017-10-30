@@ -11,7 +11,6 @@ public class Quarto implements Serializable {
 	private String descricao;
 	private double valorDiaria;
 	private String tipo;
-	private int numeroPessoa;
 	private String situacao;
 
 	public Quarto() {
@@ -67,14 +66,6 @@ public class Quarto implements Serializable {
 
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
-	}
-
-	public int getNumeroPessoa() {
-		return numeroPessoa;
-	}
-
-	public void setNumeroPessoa(int numeroPessoa) {
-		this.numeroPessoa = numeroPessoa;
 	}
 
 	public String getSituacao() {

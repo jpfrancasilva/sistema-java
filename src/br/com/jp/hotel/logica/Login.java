@@ -21,7 +21,7 @@ public class Login implements Logica {
 			return "";
 		} else {
 			System.out.println("Usuário logado: " + usuario.getNome());
-			return "WEB-INF/paginas/cabecalho.jsp";
+			return "WEB-INF/paginas/index.jsp";
 		}
 		
 	}

@@ -17,7 +17,7 @@ public class QuartoDAO {
 	// INSERE QUARTO
 	public void adicionar(Quarto quarto) {
 
-		String sql = "INSERT INTO quarto (codigo, numero, andar, descricao, valorDiaria, tipo, numeroPessoa, situacao) VALUES(?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO quarto (codigo, numero, andar, descricao, valorDiaria, tipo, situacao) VALUES(?,?,?,?,?,?,?)";
 
 		try {
 
@@ -28,8 +28,7 @@ public class QuartoDAO {
 			st.setString(4, quarto.getDescricao());
 			st.setDouble(5, quarto.getValorDiaria());
 			st.setString(6, quarto.getTipo());
-			st.setInt(7, quarto.getNumeroPessoa());
-			st.setString(8, quarto.getSituacao());
+			st.setString(7, quarto.getSituacao());
 
 			st.execute();
 			st.close();
@@ -43,7 +42,7 @@ public class QuartoDAO {
 	// EDITA QUARTO
 	public void editar(Quarto quarto) {
 
-		String sql = "UPDATE quarto SET numero = ?, andar = ?, descricao = ?, valorDiaria = ?, tipo = ?, numeroPessoa = ?, situacao = ? WHERE codigo = ?";
+		String sql = "UPDATE quarto SET numero = ?, andar = ?, descricao = ?, valorDiaria = ?, tipo = ?, situacao = ? WHERE codigo = ?";
 
 		try {
 
@@ -53,9 +52,8 @@ public class QuartoDAO {
 			st.setString(3, quarto.getDescricao());
 			st.setDouble(4, quarto.getValorDiaria());
 			st.setString(5, quarto.getTipo());
-			st.setInt(6, quarto.getNumeroPessoa());
-			st.setString(7, quarto.getSituacao());
-			st.setLong(8, quarto.getCodigo());
+			st.setString(6, quarto.getSituacao());
+			st.setLong(7, quarto.getCodigo());
 			st.execute();
 			st.close();
 
@@ -97,7 +95,6 @@ public class QuartoDAO {
 				quarto.setAndar(rs.getInt("andar"));
 				quarto.setDescricao(rs.getString("descricao"));
 				quarto.setTipo(rs.getString("tipo"));
-				quarto.setNumeroPessoa(rs.getInt("numeroPessoa"));
 				quarto.setValorDiaria(rs.getDouble("valorDiaria"));
 				quarto.setSituacao(rs.getString("situacao"));
 				quartos.add(quarto);
@@ -130,7 +127,6 @@ public class QuartoDAO {
 				quarto.setAndar(rs.getInt("andar"));
 				quarto.setDescricao(rs.getString("descricao"));
 				quarto.setNumero(rs.getInt("numero"));
-				quarto.setNumeroPessoa(rs.getInt("numeroPessoas"));
 				quarto.setValorDiaria(rs.getDouble("valorDiaria"));
 				quarto.setTipo(rs.getString("tipo"));
 				quarto.setSituacao(rs.getString("situacao"));

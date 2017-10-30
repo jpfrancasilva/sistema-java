@@ -26,9 +26,6 @@
 										<strong>Tipo:</strong> ${quarto.tipo}
 									</p>
 									<p>
-										<strong>Capacidade:</strong> ${quarto.numeroPessoa}
-									</p>
-									<p>
 										<strong>Valor diária:</strong>R$ ${quarto.valorDiaria}
 									</p>
 									<p>
@@ -65,9 +62,6 @@
 										<strong>Tipo:</strong> ${quarto.tipo}
 									</p>
 									<p>
-										<strong>Capacidade:</strong> ${quarto.numeroPessoa}
-									</p>
-									<p>
 										<strong>Valor diária:</strong>R$ ${quarto.valorDiaria}
 									</p>
 									<p>
@@ -102,9 +96,6 @@
 									</p>
 									<p>
 										<strong>Tipo:</strong> ${quarto.tipo}
-									</p>
-									<p>
-										<strong>Capacidade:</strong> ${quarto.numeroPessoa}
 									</p>
 									<p>
 										<strong>Valor diária:</strong>R$ ${quarto.valorDiaria}

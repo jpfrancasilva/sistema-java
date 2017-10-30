@@ -18,7 +18,6 @@ public class CadastraQuartos implements Logica {
 		String descricao = request.getParameter("descricao");
 		Float valorDiaria = Float.parseFloat(request.getParameter("valorDiaria"));
 		String tipo = request.getParameter("tipo");
-		int numeroPessoa = Integer.parseInt("numeroPessoa");
 		String situacao = request.getParameter("situacao");
 
 		Quarto quarto = new Quarto();
@@ -28,7 +27,6 @@ public class CadastraQuartos implements Logica {
 		quarto.setDescricao(descricao);
 		quarto.setValorDiaria(valorDiaria);
 		quarto.setTipo(tipo);
-		quarto.setNumeroPessoa(numeroPessoa);
 		quarto.setSituacao(situacao);
 
 		QuartoDAO dao = new QuartoDAO();

@@ -33,7 +33,6 @@
 							<td>${quarto.descricao}</td>
 							<td>${quarto.valorDiaria}</td>
 							<td>${quarto.tipo}</td>
-							<td>${quarto.numeroPessoa}</td>
 							<td>${quarto.situacao}</td>
 							<td class="actions"><a class="btn btn-primary btn-xs"
 								href="sistema?logica=editarQuarto">Editar</a> <a
