@@ -41,7 +41,7 @@ public class HospedesDAO {
 		try {
 
 			List<Hospedes> hospedes = new ArrayList<Hospedes>();
-			PreparedStatement stmt = conexao.prepareStatement("SELECT * FROM hospede");
+			PreparedStatement stmt = conexao.prepareStatement("SELECT * FROM hospede order by codigo");
 			ResultSet rs = stmt.executeQuery(); // --> O resultado da query
 												// acima é gravado dentro de rs.
 
@@ -119,10 +119,8 @@ public class HospedesDAO {
 	// MÉTODO PARA EDITAR O HÓSPEDE PELO CÓDIGO
 	public void editar(Hospedes hospede) {
 
-		String sql = "UPDATE hospede set nome = ?, endereco = ?, telefone = ?, cpf = ? WHERE codigo = ?";
-
 		try {
-
+			String sql = "UPDATE hospede set nome = ?, endereco = ?, telefone = ?, cpf = ? WHERE codigo = ?";
 			PreparedStatement stmt = conexao.prepareStatement(sql);
 			stmt.setString(1, hospede.getNome());
 			stmt.setString(2, hospede.getEndereco());

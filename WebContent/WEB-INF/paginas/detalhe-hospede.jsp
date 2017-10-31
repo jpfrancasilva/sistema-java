@@ -23,8 +23,11 @@
 				</div>
 				<div class="form-group">
 					<label for="telefone">Fone</label> <input type="text"
-						class="form-control input-sm" name="telefone"
-						value="${hospede.telefone}" />
+						class="form-control input-sm" name="telefone" value="${hospede.telefone}" />
+				</div>
+				<div class="form-group">
+					<label for="cpf">CPF</label> <input type="text"
+						class="form-control input-sm" name="cpf" value="${hospede.cpf}" />
 				</div>
 				<!-- <div class="form-group form-group-sm">
 					<label for="pessoas" class="control-label">Nº de Pessoas</label> <select
@@ -41,10 +44,6 @@
 						<option>10</option>
 					</select>
 				</div> -->
-				<div class="form-group">
-					<label for="cpf">CPF</label> <input type="text"
-						class="form-control input-sm" name="cpf" value="${hospede.cpf}" />
-				</div>
 				<div class="form-group">
 					<a href="sistema?logica=ListaHospedes" class="btn btn-default">Voltar</a>
 					<input type="submit" class="btn btn-primary" value="Atualizar">

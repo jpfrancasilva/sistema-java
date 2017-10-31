@@ -85,7 +85,7 @@ public class QuartoDAO {
 		try {
 
 			List<Quarto> quartos = new ArrayList<Quarto>();
-			PreparedStatement st = conexao.prepareStatement("SELECT * FROM quarto");
+			PreparedStatement st = conexao.prepareStatement("SELECT * FROM quarto order by codigo");
 			ResultSet rs = st.executeQuery();
 
 			while (rs.next()) {
