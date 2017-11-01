@@ -13,7 +13,6 @@
 			<table class="table table-striped table-hover">
 				<thead>
 					<tr>
-						<th>Código</th>
 						<th>Nome</th>
 						<th>Telefone</th>
 						<th>CPF</th>
@@ -24,7 +23,6 @@
 				<tbody>
 					<c:forEach var="hospede" items="${hospedes}">
 						<tr>
-							<td>${hospede.codigo}</td>
 							<td>${hospede.nome}</td>
 							<td>${hospede.telefone}</td>
 							<td>${hospede.cpf}</td>
