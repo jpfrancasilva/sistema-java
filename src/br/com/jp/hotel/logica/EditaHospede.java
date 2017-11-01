@@ -11,11 +11,11 @@ public class EditaHospede implements Logica {
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-		Long codigo = Long.parseLong(request.getParameter("codigo"));
-		String nome = request.getParameter("nome");
-		String endereco = request.getParameter("endereco");
-		String telefone = request.getParameter("telefone");
-		String cpf = request.getParameter("cpf");
+		Long codigo = Long.parseLong(request.getParameter("codigoEd"));
+		String nome = request.getParameter("nomeEd");
+		String endereco = request.getParameter("enderecoEd");
+		String telefone = request.getParameter("telefoneEd");
+		String cpf = request.getParameter("cpfEd");
 
 		Hospedes hospede = new Hospedes();
 		hospede.setCodigo(codigo);

@@ -42,7 +42,7 @@ public class QuartoDAO {
 	// EDITA QUARTO
 	public void editar(Quarto quarto) {
 
-		String sql = "UPDATE quarto SET numero = ?, andar = ?, descricao = ?, valorDiaria = ?, tipo = ?, situacao = ? WHERE codigo = ?";
+		String sql = "UPDATE quarto SET numero = ?, andar = ?, descricao = ?, valorDiaria = ?, tipo = ? WHERE codigo = ?";
 
 		try {
 
@@ -52,8 +52,8 @@ public class QuartoDAO {
 			st.setString(3, quarto.getDescricao());
 			st.setDouble(4, quarto.getValorDiaria());
 			st.setString(5, quarto.getTipo());
-			st.setString(6, quarto.getSituacao());
-			st.setLong(7, quarto.getCodigo());
+			//st.setString(6, quarto.getSituacao());
+			st.setLong(6, quarto.getCodigo());
 			st.execute();
 			st.close();
 

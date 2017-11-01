@@ -3,7 +3,7 @@
 	<h3 class="page-header">Edição de Quarto</h3>
 	<div class="row">
 		<div class="col-md-offset-1 col-md-10 col-md-offset-1">
-			<form action="sistema?logica=EditaQuarto&codigo=${quarto.codigo}"
+			<form action="sistema?logica=EditarQuarto&codigo=${quarto.codigo}"
 				method="POST">
 				<div class="form-group row">
 					<div class="col-xs-1">
@@ -13,13 +13,13 @@
 					</div>
 				</div>
 				<div class="form-group">
+					<label for="andar">Andar</label> <input type="text"
+						class="form-control input-sm" name="andar" value="${quarto.andar}" />
+				</div>
+				<div class="form-group">
 					<label for="numero">Nº</label> <input type="text"
 						class="form-control input-sm" name="numero"
 						value="${quarto.numero}" />
-				</div>
-				<div class="form-group">
-					<label for="andar">Andar</label> <input type="text"
-						class="form-control input-sm" name="andar" value="${quarto.andar}" />
 				</div>
 				<div class="form-group">
 					<label for="descricao">Descrição</label>
@@ -32,24 +32,24 @@
 						value="${quarto.valorDiaria}" />
 				</div>
 				<div class="form-group">
-					<label for="tipo">Tipo</label> <input type="text"
-						class="form-control input-sm" name="tipo" value="${quarto.tipo}" />
-				</div>
-				<div class="form-group form-group-sm">
-					<label for="pessoas" class="control-label">Nº de Pessoas</label> <input
-						type="text" class="form-control input-sm" name="numeroPessoa"
-						id="numeroPessoas" value="${quarto.numeroPessoa}" />
-				</div>
-				<div class="form-group">
-					<label for="cpf">CPF</label> <input type="text"
-						class="form-control input-sm" name="cpf" value="${hospede.cpf}" />
+					<label for="tipo">Tipo</label> 
+								<select
+									class="form-control" name="tipo" id="tipo" value="${quarto.tipo}">
+									<option>Casal</option>
+									<option>Solteiro</option>
+								</select>
 				</div>
 				<div class="form-group">
-					<a href="sistema?logica=ListaHospedes" class="btn btn-default">Voltar</a>
+					<label for="situacao">Situacao</label> <input type="text"
+						 class="form-control input-sm" name="situacao" 
+						value="${quarto.situacao}" disabled/>
+				</div>
+				<div class="form-group">
+					<a href="sistema?logica=ListaQuartos" class="btn btn-default">Voltar</a>
 					<input type="submit" class="btn btn-primary" value="Atualizar">
 				</div>
 			</form>
 		</div>
 	</div>
 </div>
-<%@ include file="/WEB-INF/paginas/rodape.jsp"%>ml>
+<%@ include file="/WEB-INF/paginas/rodape.jsp"%>

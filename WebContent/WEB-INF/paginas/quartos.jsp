@@ -34,7 +34,7 @@
 							<td>${quarto.tipo}</td>
 							<td>${quarto.situacao}</td>
 							<td class="actions"><a class="btn btn-primary btn-xs"
-								href="sistema?logica=editarQuarto">Editar</a>
+								href="sistema?logica=BuscaQuarto&codigo=${quarto.codigo}">Editar</a>
 								<a onclick="return confirm('Você tem certeza que deseja deletar este quarto?')"
  								class="btn btn-danger btn-xs" href="sistema?logica=ExcluirQuarto&codigo=${quarto.codigo}" data-toggle="modal"
 								data-target="sistema?logica=ExcluirQuarto">Excluir</a></td>
