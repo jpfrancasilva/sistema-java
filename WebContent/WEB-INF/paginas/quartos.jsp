@@ -1,4 +1,16 @@
 <%@ include file="/WEB-INF/paginas/cabecalho.jsp"%>
+
+<script>
+jQuery(function($){
+$("#campoData").mask("99/99/9999");
+$("#campoTelefone").mask("(999) 999-9999");
+$("#campoSenha").mask("***-****");
+$("#campoCpf").mask("999.999.999-99");
+$("#numeroQuarto").mask("99");
+$("numeroAndar").mask("99");
+});
+</script>
+
 <div class="container-fluid">
 	<div class="row">
 		<div class=" col-md-12 main">

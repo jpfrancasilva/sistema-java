@@ -40,7 +40,7 @@
 					<li><a href="sistema?logica=VisaoGeral">Início</a></li>
 					<li><a href="sistema?logica=ListaHospedes">Hóspedes</a></li>
 					<li><a href="sistema?logica=ListaQuartos">Quartos</a></li>
-					<li><a href="sistema?logica=MostraReservas">Reservas</a></li>
+					<li><a href="sistema?logica=ListaReservas">Reservas</a></li>
 					<li><a href="./login.jsp">Logout</a></li>
 				</ul>
 			</div>

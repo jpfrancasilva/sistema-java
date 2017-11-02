@@ -18,7 +18,7 @@ public class Login implements Logica {
 
 		if (usuario.getNome() == null) {
 			System.out.println("usuario nao existe");
-			return "";
+			return "loginErro.jsp";
 		} else {
 			System.out.println("Usuário logado: " + usuario.getNome());
 			return "WEB-INF/paginas/index.jsp";
