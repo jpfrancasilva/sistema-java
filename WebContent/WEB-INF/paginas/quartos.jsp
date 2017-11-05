@@ -80,7 +80,7 @@ $("numeroAndar").mask("99");
 
 							<div class="form-group form-group-sm">
 								<label for="andar" class="control-label">Andar</label> <input
-									type="text" class="form-control" name="andar"
+									type="text" class="form-control" name="andar" required="required"
 									placeholder="Ex: 1">
 							</div>
 

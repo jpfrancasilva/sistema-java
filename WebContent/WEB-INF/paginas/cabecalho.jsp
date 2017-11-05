@@ -41,7 +41,7 @@
 					<li><a href="sistema?logica=ListaHospedes">Hóspedes</a></li>
 					<li><a href="sistema?logica=ListaQuartos">Quartos</a></li>
 					<li><a href="sistema?logica=ListaReservas">Reservas</a></li>
-					<li><a href="./login.jsp">Logout</a></li>
+					<li><a href="sistema?logica=Logout">Logout</a></li>
 				</ul>
 			</div>
 		</div>

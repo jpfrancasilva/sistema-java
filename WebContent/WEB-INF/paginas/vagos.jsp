@@ -39,80 +39,11 @@
 								</div>
 								<div class="panel-footer">
 									<button type="button" class="btn btn-sm btn-success"
-										disabled="disabled">Check-in</button>
+										disabled="disabled" >Check-in</button>
 									<button type="button" class="btn btn-sm btn-primary"
 										data-toggle="modal" data-target=".bs-example-modal-lg">Reserva</button>
 									<button type="button" class="btn btn-sm btn-danger"
 										disabled="disabled">Check-out</button>
-								</div>
-							</div>
-						</c:when>
-
-						<c:when test="${quarto.situacao == 'Ocupado'}">
-							<div class="panel panel-danger">
-								<div class="panel-heading">
-									<h3 class="panel-title">
-										<i class="fa fa-bed" style="font-size: 28px">
-											${quarto.codigo} - ${quarto.situacao}</i>
-									</h3>
-								</div>
-								<div class="panel-body">
-									<p>
-										<strong>Andar:</strong> ${quarto.andar}
-									</p>
-									<p>
-										<strong>Itens:</strong> ${quarto.descricao}
-									</p>
-									<p>
-										<strong>Tipo:</strong> ${quarto.tipo}
-									</p>
-									<p>
-										<strong>Valor diária:</strong>R$ ${quarto.valorDiaria}
-									</p>
-									<p>
-										<strong>Hospede:</strong> ${hospede.nome}
-									</p>
-								</div>
-								<div class="panel-footer">
-									<button type="button" class="btn btn-sm btn-success"
-										disabled="disabled">Check-in</button>
-									<button type="button" class="btn btn-sm btn-primary"
-										disabled="disabled">Reserva</button>
-									<button type="button" class="btn btn-sm btn-danger">Check-out</button>
-								</div>
-							</div>
-						</c:when>
-
-						<c:when test="${quarto.situacao == 'Reservado'}">
-							<div class="panel panel-warning">
-								<div class="panel-heading">
-									<h3 class="panel-title">
-										<i class="fa fa-bed" style="font-size: 28px">
-											${quarto.codigo} - ${quarto.situacao}</i>
-									</h3>
-								</div>
-								<div class="panel-body">
-									<p>
-										<strong>Andar:</strong> ${quarto.andar}
-									</p>
-									<p>
-										<strong>Itens:</strong> ${quarto.descricao}
-									</p>
-									<p>
-										<strong>Tipo:</strong> ${quarto.tipo}
-									</p>
-									<p>
-										<strong>Valor diária:</strong>R$ ${quarto.valorDiaria}
-									</p>
-									<p>
-										<strong>Hospede:</strong> ${hospede.nome}
-									</p>
-								</div>
-								<div class="panel-footer">
-									<button type="button" class="btn btn-sm btn-success">Check-in</button>
-									<button type="button" class="btn btn-sm btn-primary"
-										disabled="disabled">Reserva</button>
-									<button type="button" class="btn btn-sm btn-danger">Cancelar</button>
 								</div>
 							</div>
 						</c:when>

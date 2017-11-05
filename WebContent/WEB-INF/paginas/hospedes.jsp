@@ -76,7 +76,7 @@ $("numeroAndar").mask("99");
 
 							<div class="form-group form-group-sm">
 								<label for="endereco" class="control-label">Endereço</label> <input
-									type="text" class="form-control" name="endereco"
+									type="text" class="form-control" name="endereco" required="required"
 									placeholder="Endereço do hóspede">
 							</div>
 

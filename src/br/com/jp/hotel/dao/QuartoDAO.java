@@ -111,6 +111,102 @@ public class QuartoDAO {
 
 	}
 
+	// LISTA TODOS OS QUARTOS OCUPADOS
+		public List<Quarto> listarOcupados() {
+
+			try {
+
+				List<Quarto> quartos = new ArrayList<Quarto>();
+				PreparedStatement st = conexao.prepareStatement("SELECT * FROM quarto where situacao = 'Ocupado' order by codigo");
+				ResultSet rs = st.executeQuery();
+
+				while (rs.next()) {
+					Quarto quarto = new Quarto();
+					quarto.setCodigo(rs.getInt("codigo"));
+					quarto.setNumero(rs.getInt("numero"));
+					quarto.setAndar(rs.getInt("andar"));
+					quarto.setDescricao(rs.getString("descricao"));
+					quarto.setTipo(rs.getString("tipo"));
+					quarto.setValorDiaria(rs.getDouble("valorDiaria"));
+					quarto.setSituacao(rs.getString("situacao"));
+					quartos.add(quarto);
+				}
+
+				rs.close();
+				st.close();
+
+				return quartos;
+
+			} catch (SQLException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+		
+		// LISTA TODOS OS QUARTOS VAGOS
+		public List<Quarto> listarVagos() {
+
+			try {
+
+				List<Quarto> quartos = new ArrayList<Quarto>();
+				PreparedStatement st = conexao.prepareStatement("SELECT * FROM quarto where situacao = 'Vago' order by codigo");
+				ResultSet rs = st.executeQuery();
+
+				while (rs.next()) {
+					Quarto quarto = new Quarto();
+					quarto.setCodigo(rs.getInt("codigo"));
+					quarto.setNumero(rs.getInt("numero"));
+					quarto.setAndar(rs.getInt("andar"));
+					quarto.setDescricao(rs.getString("descricao"));
+					quarto.setTipo(rs.getString("tipo"));
+					quarto.setValorDiaria(rs.getDouble("valorDiaria"));
+					quarto.setSituacao(rs.getString("situacao"));
+					quartos.add(quarto);
+				}
+
+				rs.close();
+				st.close();
+
+				return quartos;
+
+			} catch (SQLException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+		
+		// LISTA TODOS OS QUARTOS RESERVADOS
+		public List<Quarto> listarReservados() {
+
+			try {
+
+				List<Quarto> quartos = new ArrayList<Quarto>();
+				PreparedStatement st = conexao.prepareStatement("SELECT * FROM quarto where situacao = 'Reservado' order by codigo");
+				ResultSet rs = st.executeQuery();
+
+				while (rs.next()) {
+					Quarto quarto = new Quarto();
+					quarto.setCodigo(rs.getInt("codigo"));
+					quarto.setNumero(rs.getInt("numero"));
+					quarto.setAndar(rs.getInt("andar"));
+					quarto.setDescricao(rs.getString("descricao"));
+					quarto.setTipo(rs.getString("tipo"));
+					quarto.setValorDiaria(rs.getDouble("valorDiaria"));
+					quarto.setSituacao(rs.getString("situacao"));
+					quartos.add(quarto);
+				}
+
+				rs.close();
+				st.close();
+
+				return quartos;
+
+			} catch (SQLException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+	
 	//BUSCA QUARTO PELO CÓDIGO
 	public Quarto buscaPorCodigo(Long codigo) {
 		
