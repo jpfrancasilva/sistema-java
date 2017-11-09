@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.jp.hotel.conexao.ConnectionFactory;
 import br.com.jp.hotel.model.Usuario;
@@ -28,6 +30,7 @@ public class UsuarioDAO {
 				usuario.setEmail(rs.getString("email"));
 				usuario.setSenha(rs.getString("senha"));
 				usuario.setNome(rs.getString("nome"));
+				usuario.setTipo(rs.getString("tipo"));
 
 			}
 			
@@ -39,4 +42,36 @@ public class UsuarioDAO {
 		}
 		return usuario;
 	}
+	
+	public List<Usuario> listar() {
+
+		try {
+
+			List<Usuario> usuarios = new ArrayList<Usuario>();
+			PreparedStatement stmt = conexao.prepareStatement("SELECT * FROM usuario");
+			ResultSet rs = stmt.executeQuery(); // --> O resultado da query
+												// acima é gravado dentro de rs.
+
+			while (rs.next()) {
+				// Criando novo objeto usuario
+				Usuario usuario = new Usuario();
+				
+				usuario.setNome(rs.getString("nome"));
+				usuario.setEmail(rs.getString("email"));
+				usuario.setTipo(rs.getString("tipo"));
+				usuario.setTipo(rs.getString("senha"));
+
+				// adicionando um usuario à lista de usuarios
+				usuarios.add(usuario);
+			}
+
+			rs.close();
+			stmt.close();
+			return usuarios;
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
 }
