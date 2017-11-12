@@ -38,6 +38,36 @@ public class QuartoDAO {
 		}
 
 	}
+	
+	public void checkinQuarto(Quarto quarto) {
+		String sql = "UPDATE quarto SET situacao = 'Ocupado' where codigo = ?";
+		
+		try {
+
+			PreparedStatement st = conexao.prepareStatement(sql);
+			st.setLong(1, quarto.getCodigo());
+			st.execute();
+			st.close();
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	public void cancelarReserva(Quarto quarto) {
+		String sql = "UPDATE quarto SET situacao = 'Vago' where codigo = ?";
+		
+		try {
+
+			PreparedStatement st = conexao.prepareStatement(sql);
+			st.setLong(1, quarto.getCodigo());
+			st.execute();
+			st.close();
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
 
 	// EDITA QUARTO
 	public void editar(Quarto quarto) {

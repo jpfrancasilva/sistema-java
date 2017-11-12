@@ -59,7 +59,7 @@ public class UsuarioDAO {
 				usuario.setNome(rs.getString("nome"));
 				usuario.setEmail(rs.getString("email"));
 				usuario.setTipo(rs.getString("tipo"));
-				usuario.setTipo(rs.getString("senha"));
+				usuario.setSenha(rs.getString("senha"));
 
 				// adicionando um usuario à lista de usuarios
 				usuarios.add(usuario);

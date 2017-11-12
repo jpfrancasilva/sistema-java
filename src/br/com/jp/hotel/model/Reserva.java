@@ -1,19 +1,47 @@
 package br.com.jp.hotel.model;
 
 import java.io.Serializable;
-import java.util.Calendar;
+import java.sql.Date;
+//import java.util.Calendar;
 
 public class Reserva implements Serializable {
 
 	private static final long serialVersionUID = -6567310622270338443L;
 	private Long codigo;
-	private Calendar dataEntrada;
-	private Calendar dataSaida;
+	private Date dataEntrada;
+	private Date dataSaida;
 	private Double valor;
 	private String situacao;
 	private Long codigoHospede;
 	private Long codigoQuarto;
 	private int dias;
+	private String nomeHospede;
+	private String cpfHospede;
+	private Hospedes hospede;
+
+	public Hospedes getHospede() {
+		return hospede;
+	}
+
+	public void setHospede(Hospedes hospede) {
+		this.hospede = hospede;
+	}
+
+	public String getCpfHospede() {
+		return cpfHospede;
+	}
+
+	public void setCpfHospede(String cpfHospede) {
+		this.cpfHospede = cpfHospede;
+	}
+
+	public String getNomeHospede() {
+		return nomeHospede;
+	}
+
+	public void setNomeHospede(String nomeHospede) {
+		this.nomeHospede = nomeHospede;
+	}
 
 	public Reserva() {
 	}
@@ -26,19 +54,19 @@ public class Reserva implements Serializable {
 		this.codigo = codigo;
 	}
 
-	public Calendar getDataEntrada() {
+	public Date getDataEntrada() {
 		return dataEntrada;
 	}
 
-	public void setDataEntrada(Calendar dataEntrada) {
-		this.dataEntrada = dataEntrada;
+	public void setDataEntrada(Date date) {
+		this.dataEntrada = date;
 	}
 
-	public Calendar getDataSaida() {
+	public Date getDataSaida() {
 		return dataSaida;
 	}
 
-	public void setDataSaida(Calendar dataSaida) {
+	public void setDataSaida(Date dataSaida) {
 		this.dataSaida = dataSaida;
 	}
 

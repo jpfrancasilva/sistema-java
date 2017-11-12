@@ -33,9 +33,6 @@
 									<p>
 										<strong>Valor diária:</strong>R$ ${quarto.valorDiaria}
 									</p>
-									<p>
-										<strong>Hospede:</strong> ${hospede.nome}
-									</p>
 								</div>
 								<div class="panel-footer">
 									<button type="button" class="btn btn-sm btn-success"

@@ -7,7 +7,6 @@
 			<a  class="btn btn-sm btn-primary" href="sistema?logica=VisaoGeralReservados">Reservados</a>
 			<a  class="btn btn-sm btn-danger" href="sistema?logica=VisaoGeralOcupados">Ocupados</a>
 			</h2>
-			
 			<c:forEach var="quarto" items="${quartos}">
 				<div class="col-md-3">
 
@@ -32,9 +31,6 @@
 									</p>
 									<p>
 										<strong>Valor diária:</strong>R$ ${quarto.valorDiaria}
-									</p>
-									<p>
-										<strong>Hospede:</strong> ${hospede.nome}
 									</p>
 								</div>
 								<div class="panel-footer">
@@ -69,16 +65,15 @@
 									<p>
 										<strong>Valor diária:</strong>R$ ${quarto.valorDiaria}
 									</p>
-									<p>
-										<strong>Hospede:</strong> ${hospede.nome}
-									</p>
 								</div>
 								<div class="panel-footer">
 									<button type="button" class="btn btn-sm btn-success"
 										disabled="disabled">Check-in</button>
 									<button type="button" class="btn btn-sm btn-primary"
 										disabled="disabled">Reserva</button>
-									<button type="button" class="btn btn-sm btn-danger">Check-out</button>
+									<a type="button" class="btn btn-sm btn-danger"
+									href =" sistema?logica=BuscaQuartoCancelar&codigo=${quarto.codigo}"
+									>Check-out</a>
 								</div>
 							</div>
 						</c:when>
@@ -104,21 +99,26 @@
 									<p>
 										<strong>Valor diária:</strong>R$ ${quarto.valorDiaria}
 									</p>
-									<p>
-										<strong>Hospede:</strong> ${hospede.nome}
-									</p>
 								</div>
 								<div class="panel-footer">
-									<button type="button" class="btn btn-sm btn-success">Check-in</button>
+									<a type="button" class="btn btn-sm btn-success"
+									onclick="return confirm('Confirmar Check-in?')"
+									href =" sistema?logica=BuscaQuartoCheckin&codigo=${quarto.codigo}"
+									>Check-in</a>
 									<button type="button" class="btn btn-sm btn-primary"
 										disabled="disabled">Reserva</button>
-									<button type="button" class="btn btn-sm btn-danger">Cancelar</button>
+									<a type="button" class="btn btn-sm btn-danger"
+									onclick="return confirm('Confirmar Cancelamento?')"
+									href =" sistema?logica=BuscaQuartoCancelar&codigo=${quarto.codigo}"
+									>Cancelar</a>
 								</div>
 							</div>
 						</c:when>
 					</c:choose>
 				</div>
 			</c:forEach>
+			
+			
 
 			<!-- MODAL COM FORMULÁRIA DE RESERVA DE QUARTO -->
 			<div class="modal fade bs-example-modal-lg" tabindex="-1"
@@ -164,23 +164,6 @@
 												<label for="cpf" class="control-label">CPF</label> <input
 													type="text" class="form-control input-sm" name="cpf"
 													placeholder="somente números" required="required">
-											</div>
-
-											<div class="form-group form-group-sm">
-												<label for="pessoas" class="control-label">Nº de
-													Pessoas</label> <select name="pessoas" class="form-control"
-													id="pessoas">
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6</option>
-													<option>7</option>
-													<option>8</option>
-													<option>9</option>
-													<option>10</option>
-												</select>
 											</div>
 
 										</fieldset>

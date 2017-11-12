@@ -33,7 +33,7 @@ $("numeroAndar").mask("99");
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="usuarios" items="${usuario}">
+					<c:forEach var="usuario" items="${usuarios}">
 						<tr>
 							<td>${usuario.nome}</td>
 							<td>${usuario.email}</td>
