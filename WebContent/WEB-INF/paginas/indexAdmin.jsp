@@ -5,7 +5,7 @@
 			<h2 class="page-header">Painel de Controle
 			<a class="btn btn-sm btn-success" href="sistema?logica=VisaoGeralVagos">Vagos</a>
 			<a  class="btn btn-sm btn-primary" href="sistema?logica=VisaoGeralReservados">Reservados</a>
-			<a  class="btn btn-sm btn-danger" href="sistema?logica=VisaoGeralOcupados">Ocupados</a>
+			<a  class="btn btn-sm btn-danger" href="sistema?logica=VisaoGeralOcupados">Ocupados</a>			
 			</h2>
 			
 			<c:forEach var="quarto" items="${quartos}">

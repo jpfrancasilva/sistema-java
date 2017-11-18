@@ -20,11 +20,11 @@ public class Login implements Logica {
 			System.out.println("usuario nao existe");
 			return "loginErro.jsp";
 		} else if(usuario.getTipo().equals("comum")) {
-				System.out.println("Usuário logado: " + usuario.getNome());
+				//System.out.println("Usuário logado: " + usuario.getNome());
 				request.setAttribute("usuarioteste", usuario);
 				return "WEB-INF/paginas/index.jsp";
 			}else {
-					System.out.println("Usuário logado: " + usuario.getNome());
+					//System.out.println("Usuário logado: " + usuario.getNome());
 					request.setAttribute("usuarioteste", usuario);
 					return "WEB-INF/paginas/indexAdmin.jsp";
 				}

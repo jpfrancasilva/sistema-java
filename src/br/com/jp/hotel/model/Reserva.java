@@ -18,6 +18,7 @@ public class Reserva implements Serializable {
 	private String nomeHospede;
 	private String cpfHospede;
 	private Hospedes hospede;
+	private Quarto quarto;
 
 	public Hospedes getHospede() {
 		return hospede;
@@ -25,6 +26,14 @@ public class Reserva implements Serializable {
 
 	public void setHospede(Hospedes hospede) {
 		this.hospede = hospede;
+	}
+
+	public Quarto getQuarto() {
+		return quarto;
+	}
+
+	public void setQuarto(Quarto quarto) {
+		this.quarto = quarto;
 	}
 
 	public String getCpfHospede() {

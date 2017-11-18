@@ -3,12 +3,21 @@ package br.com.jp.hotel.model;
 public class Usuario extends Funcionario{
 
 	private static final long serialVersionUID = -4393139419376833546L;
+	private Long codigo;
 	private String nome;
 	private String email;
 	private String senha;
 	private String tipo;
 	
 	public Usuario(){
+	}
+	
+	public Long getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
 	}
 
 	public String getNome() {

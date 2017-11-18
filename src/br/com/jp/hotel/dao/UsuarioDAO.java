@@ -60,6 +60,7 @@ public class UsuarioDAO {
 				usuario.setEmail(rs.getString("email"));
 				usuario.setTipo(rs.getString("tipo"));
 				usuario.setSenha(rs.getString("senha"));
+				usuario.setCodigo(rs.getLong("id"));
 
 				// adicionando um usuario à lista de usuarios
 				usuarios.add(usuario);
@@ -72,6 +73,43 @@ public class UsuarioDAO {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public void adicionar(Usuario usuario) {
+		String sql = "INSERT INTO usuario (nome, email, senha, tipo) VALUES (?,?,?,?)";
+
+		try {
+
+			PreparedStatement stmt = conexao.prepareStatement(sql);
+			stmt.setString(1, usuario.getNome());
+			stmt.setString(2, usuario.getEmail());
+			stmt.setString(3, usuario.getSenha());
+			stmt.setString(4, usuario.getTipo());
+
+			stmt.execute();
+			stmt.close();
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+
+	}
+	
+	public void excluir(Usuario usuario) {
+
+		try {
+
+			String sql = "DELETE FROM usuario WHERE id = ?";
+			PreparedStatement stmt = conexao.prepareStatement(sql);
+
+			stmt.setLong(1, usuario.getCodigo());
+			stmt.execute();
+			stmt.close();
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+
 	}
 	
 }

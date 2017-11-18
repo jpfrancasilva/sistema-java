@@ -37,7 +37,7 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="sistema?logica=VisaoGeral">Início</a></li>
+					<li><a href="sistema?logica=VisaoGeralAdmin">Início</a></li>
 					<li><a href="sistema?logica=ListaHospedes">Hóspedes</a></li>
 					<li><a href="sistema?logica=ListaQuartos">Quartos</a></li>
 					<li><a href="sistema?logica=ListaReservas">Reservas</a></li>
