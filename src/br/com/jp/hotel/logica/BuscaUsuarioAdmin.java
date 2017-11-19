@@ -19,7 +19,7 @@ public class BuscaUsuarioAdmin implements Logica {
 
 		if (usuario.getNome() == null) {
 			System.out.println("usuario nao existe");
-			return "loginErro.jsp";
+			return "WEB-INF/paginas/index.jsp";
 		} else if(usuario.getTipo().equals("admin")) {
 				//System.out.println("Usuário logado: " + usuario.getNome());
 				request.setAttribute("usuarioteste", usuario);
