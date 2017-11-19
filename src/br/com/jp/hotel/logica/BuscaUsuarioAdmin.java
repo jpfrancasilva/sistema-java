@@ -6,11 +6,12 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.jp.hotel.dao.UsuarioDAO;
 import br.com.jp.hotel.model.Usuario;
 
-public class Login implements Logica {
+public class BuscaUsuarioAdmin implements Logica {
 
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
+		
+		
 		String email = request.getParameter("email");
 		String senha = request.getParameter("senha");
 
@@ -19,10 +20,15 @@ public class Login implements Logica {
 		if (usuario.getNome() == null) {
 			System.out.println("usuario nao existe");
 			return "loginErro.jsp";
-		} else{
+		} else if(usuario.getTipo().equals("admin")) {
 				//System.out.println("Usuário logado: " + usuario.getNome());
 				request.setAttribute("usuarioteste", usuario);
-				return "WEB-INF/paginas/index.jsp";
-			}
+				return "WEB-INF/paginas/usuarios.jsp";
+			}else {
+					//System.out.println("Usuário logado: " + usuario.getNome());
+					request.setAttribute("usuarioteste", usuario);
+					return "WEB-INF/paginas/index.jsp";
+				}
 	}
+
 }

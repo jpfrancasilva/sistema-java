@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/paginas/cabecalho.jsp"%>
+<%@ include file="/WEB-INF/paginas/cabecalhoAdmin.jsp"%>
 <div class="container-fluid">
 	<div class="row">
 		<div class=" col-md-12 main">

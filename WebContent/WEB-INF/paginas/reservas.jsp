@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/paginas/cabecalho.jsp"%>
+<%@ include file="/WEB-INF/paginas/cabecalhoAdmin.jsp"%>
 
 <script>
 jQuery(function($){

@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/paginas/cabecalho.jsp"%>
+<%@ include file="/WEB-INF/paginas/cabecalhoAdmin.jsp"%>
 <div class="container-fluid">
 	<div class="row">
 		<div class=" col-md-12 main">
@@ -42,7 +42,8 @@
 										disabled="disabled">Check-in</button>
 									<button type="button" class="btn btn-sm btn-primary"
 										disabled="disabled">Reserva</button>
-									<button type="button" class="btn btn-sm btn-danger">Check-out</button>
+									<a type="button" class="btn btn-sm btn-danger"
+									href="sistema?logica=BuscaQuartoCancelar&codigo=${quarto.codigo}">Check-out</a>
 								</div>
 							</div>
 						</c:when>

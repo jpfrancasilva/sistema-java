@@ -49,7 +49,7 @@ $("numeroAndar").mask("99");
 					</c:forEach>
 				</tbody>
 			</table>
-
+			<a class="btn btn-primary" href="sistema?logica=ListaUsuarios">Listar Usuários</a>
 			<button type="button" class="btn btn-success" data-toggle="modal"
 				data-target=".bs-example-modal-lg">Novo</button>
 		</div>
@@ -78,7 +78,7 @@ $("numeroAndar").mask("99");
 							<div class="form-group form-group-sm">
 								<label for="email" class="control-label">Email</label> <input
 									type="text" class="form-control" name="email" required="required"
-									placeholder="E-mail (login) do usuário">
+									placeholder="E-mail (login) Ex: ex@ex.com">
 							</div>
 
 							<div class="form-group form-group-sm">

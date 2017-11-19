@@ -37,14 +37,64 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="sistema?logica=VisaoGeralAdmin">Início</a></li>
+					<li><a href="sistema?logica=VisaoGeral">Início</a></li>
 					<li><a href="sistema?logica=ListaHospedes">Hóspedes</a></li>
 					<li><a href="sistema?logica=ListaQuartos">Quartos</a></li>
 					<li><a href="sistema?logica=ListaReservas">Reservas</a></li>
-					<li><a href = "sistema?logica=ListaUsuarios">Usuarios</a></li>
+					<li><a data-toggle="modal" data-target=".bs-example-modal-lgg">Usuarios</a></li>
 					<li><a href="sistema?logica=Logout">Logout</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<!-- FIM DO MENU DE NAVEGAÇÃO -->
+	
+	
+	<!-- MODAL PARA CONFIRMAR USUÁRIO ADMIN -->
+			<div class="modal fade bs-example-modal-lgg" tabindex="-1"
+				role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h2 class="modal-title text-center">Informe um usuário Admin</h2>
+						</div>
+						<div class="modal-body">
+							<!-- FORMULÁRIO DE CADASTRO DE HÓSPEDES -->
+							<div class="row">
+								<div class="col-md-offset-1 col-md-10 col-md-offset-1">
+									<form action="sistema?logica=BuscaUsuarioAdmin" method="post"
+										id="cadastroHospedes" data-toggle="validator" role="form">
+										<fieldset class="form-group">
+											<legend>Usuário</legend>
+
+											<div class="form-group form-group-sm">
+												<label for="email" class="control-label">E-mail</label> <input
+													type="text" class="form-control input-sm" name="email"
+													placeholder="exemplo@exemplo.com" required="required">
+											</div>
+
+											<div class="form-group form-group-sm">
+												<label for="senha" class="control-label">Senha</label>
+												<input type="password" class="form-control input-sm"
+													name="senha" placeholder="Senha">
+											</div>
+										</fieldset>
+
+										<button type="submit" class="btn btn-primary">Confirmar</button>
+										<button type="reset" class="btn btn-default"
+											data-dismiss="modal">Cancelar</button>
+									</form>
+									<!-- FIM DO FORM -->
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		

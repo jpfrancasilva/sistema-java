@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/paginas/cabecalho.jsp"%>
+<%@ include file="/WEB-INF/paginas/cabecalhoAdmin.jsp"%>
 <div class="container-fluid">
 	<div class="row">
 		<div class=" col-md-12 main">
@@ -72,7 +72,7 @@
 									<button type="button" class="btn btn-sm btn-primary"
 										disabled="disabled">Reserva</button>
 									<a type="button" class="btn btn-sm btn-danger"
-									href =" sistema?logica=BuscaQuartoCancelar&codigo=${quarto.codigo}"
+									href ="sistema?logica=BuscaQuartoCancelar&codigo=${quarto.codigo}"
 									>Check-out</a>
 								</div>
 							</div>
@@ -109,7 +109,7 @@
 										disabled="disabled">Reserva</button>
 									<a type="button" class="btn btn-sm btn-danger"
 									onclick="return confirm('Confirmar Cancelamento?')"
-									href =" sistema?logica=BuscaQuartoCancelar&codigo=${quarto.codigo}"
+									href ="sistema?logica=BuscaQuartoCancelar&codigo=${quarto.codigo}"
 									>Cancelar</a>
 								</div>
 							</div>
@@ -117,7 +117,6 @@
 					</c:choose>
 				</div>
 			</c:forEach>
-			
 			
 
 			<!-- MODAL COM FORMULÁRIA DE RESERVA DE QUARTO -->
